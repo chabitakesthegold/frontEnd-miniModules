@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="parallaxstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <title>parallax effect</title>
+</head>
+<section class="effect">
+   <ul>
+  <li class="scroll" data-rate="-2" data-direction="vertical">par</li>
+    <li >al</li>
+    <li class="scroll" data-rate="2" data-direction="vertical">lax</li> 
+</ul>
+</section>
+<span class="scroll" data-rateY="1" data-rateX="1" data-direction="horizontal"></span>
+<script>
+    window.addEventListener('scroll',function(e){
+
+        const target =document.querySelectorAll('.scroll');
+
+        var index = 0, length = target.length;
+        for (index; index < length; index++) {
+
+            var pos = window.pageYOffset * target[index].dataset.rate;
+
+            if (target[index].dataset.direction === 'vertical'){
+            target[index].style.transform= 'translate3d(0px,'+pos+'px,0px)';
+            }else{
+                var posX =window.pageYOffset * target[index].dataset.ratex;
+                var posY =window.pageYOffset * target[index].dataset.ratey;
+                target[index].style.transform='translate3d('+posX+'px,'+posY+'px,0px)';
+            
+            }
+    }
+    });
+     
+</script>
+<secction>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident perferendis est, modi tenetur nam tempora quod aliquid placeat recusandae eius minima accusantium adipisci natus? Ex nostrum temporibus perspiciatis corrupti ducimus.
+    Lorem ipsum dolor sit amet.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ad nostrum praesentium commodi, voluptate beatae. Eaque eos praesentium optio nobis mollitia perspiciatis architecto similique, molestiae perferendis dicta porro dolorum voluptatibus .
+</secction>
+
+</body>
+</html>

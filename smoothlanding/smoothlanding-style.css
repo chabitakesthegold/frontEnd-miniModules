@@ -1,0 +1,101 @@
+*{
+margin: 0;
+padding:0 ;
+box-sizing: border-box;
+
+}
+
+main{
+    font-family: 'Jura', sans-serif; 
+
+
+}
+
+.landing{
+min-height: 100vh;
+background:url("./hero.jpg") ;
+background-size: cover;
+padding:0rem 5rem;
+
+}
+
+nav {
+    display: flex;
+    align-items: center;
+justify-content: space-between;
+min-height: 10vh;
+color: rgb(4, 4, 61);}
+
+
+
+.nav-links{
+    display:flex;
+list-style: none;
+}
+
+.nav-links li{
+    padding-left: 5rem ;
+    font-size: 1rem;
+
+}
+#logo{
+font-family:;
+font-weight: ;
+font-size: ;
+color: rgb(4, 4, 61);
+}
+.big-text{
+position: absolute;
+top: 40%;
+left: 50%;
+transform:translate(-50%, -40%);
+font-size: 3rem;
+font-family: ;
+color: rgb(4, 4, 61);
+
+}
+
+.intro{
+background-color: rgb(4, 4, 61);
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+
+
+
+.intro-text{
+color:rgb(255, 94, 0);
+font-family: ;
+font-size: 2rem;
+}
+
+
+.slider{
+    background-color: rgb(3, 3, 29);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   transform:translateY(100%) ;
+    
+    }
+
+
+    .hide{
+        background: rgb(4, 4, 61);
+        overflow:hidden;
+    }
+.hide span{
+transform: translateY(100%);
+display: inline-block;
+
+}

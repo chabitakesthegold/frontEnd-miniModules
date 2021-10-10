@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    pad: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    z-index: 999;
+    position: fixed;
+    top: o;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#6a38df ;
+    box-shadow: 0 5px 25px rgb(000/20%);
+    padding: 0 100px;
+    transition: 0.6s;
+}
+
+header .logo{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2em;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fffefd;
+    
+}
+header .navigation{
+    position: relative;
+    line-height: 75px;
+}
+
+header .navigation .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    user-select: none;
+}
+
+.menu-item a {
+color: #ffff;
+font: size 0.8em; 
+text-decoration: none;
+margin: 20px;
+padding: 25px 0;
+position: relative;
+
+}
+.menu-item a::after{
+    content:'';
+    width:0;
+    height: 3px;
+    position:absolute;
+    bottom: 15px;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: rgb(252, 93, 19);
+    transition: width 0.3s;
+}
+
+.menu-item a:hover::after{
+    width: 50%;
+}
+.menu-btn{
+        display: none;}
+
+@media  (max-width: 1060px){
+    header .navigation .menu{
+        position:fixed;
+        display:block;
+        background: #150B2C;
+        min-width: 350px;
+        height: 100vh;
+        top:0;
+        right: -100%;
+        padding: 90px 50px;
+        overflow-y: auto;
+        transition: 0.5s;
+        transition-property: right,visibility;
+    }
+    header .navigation .menu.active{
+        right: 0;
+        visibility: visible;
+    }
+    .close-btn{
+        position: absolute;
+        background-image:   url(/img/close-btn.svg);
+        
+        width: 40px;
+        height: 40px;
+        background-size: 25px;
+        background-position:center ;
+        top: 0;
+        left: 0;
+        max-resolution: 25px;
+        cursor: pointer;
+    }
+
+    .menu-btn{
+        background-image: url(/img/menu-btn-3.svg);
+         width: 40px;
+        height: 40px;
+        background-size: 30px;
+        background-position:center ;
+        cursor: pointer;
+        display: block;
+    }
+    header{
+        padding: 15px 20px;
+    }
+}
+    
+
+ 
